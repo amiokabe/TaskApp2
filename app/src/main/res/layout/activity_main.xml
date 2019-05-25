@@ -8,10 +8,45 @@
         android:fitsSystemWindows="true"
         tools:context=".MainActivity">
 
-   <ListView
-           android:id="@+id/listView1"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+                <EditText
+                   android:id="@+id/search_bar"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:backgroundTint="@color/colorPrimary"
+                   android:text="カテゴリーで探す"/>
+
+                <Button
+                   android:id="@+id/search_button"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:text="探す"/>
+             </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="60dp"/>
 
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"

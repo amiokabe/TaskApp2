@@ -5,7 +5,7 @@ import io.realm.annotations.PrimaryKey
 import java.util.Date
 import java.io.Serializable
 
-class Task: RealmObject(), Serializable {
+open class Task: RealmObject(), Serializable {
     var category: String = ""
     var title: String = ""
     var contents: String = ""

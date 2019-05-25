@@ -7,9 +7,11 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.view.View
 import android.support.v7.widget.Toolbar
 import io.realm.Realm
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_input.*
 import java.util.*
 
@@ -115,16 +117,18 @@ class InputActivity : AppCompatActivity() {
             mTask!!.id = identifier
         }
 
-        val category = category_edit_text.toString()
+        val category = category_edit_text.text.toString()
         val title = title_edit_text.text.toString()
         val content = content_edit_text.text.toString()
 
         mTask!!.category = category
         mTask!!.title = title
         mTask!!.contents = content
+
         val calendar = GregorianCalendar(mYear, mMonth, mDay, mHour, mMinute)
         val date = calendar.time
         mTask!!.date = date
+
 
         realm.copyToRealmOrUpdate(mTask!!)
         realm.commitTransaction()
