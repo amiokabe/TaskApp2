@@ -11,7 +11,6 @@ import android.support.design.widget.Snackbar
 import android.view.View
 import android.support.v7.widget.Toolbar
 import io.realm.Realm
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_input.*
 import java.util.*
 
@@ -125,7 +124,6 @@ class InputActivity : AppCompatActivity() {
         }
 
         val category = category_edit_text.text.toString()
-
         val title = title_edit_text.text.toString()
         val content = content_edit_text.text.toString()
 
@@ -136,7 +134,6 @@ class InputActivity : AppCompatActivity() {
         val calendar = GregorianCalendar(mYear, mMonth, mDay, mHour, mMinute)
         val date = calendar.time
         mTask!!.date = date
-
 
         realm.copyToRealmOrUpdate(mTask!!)
         realm.commitTransaction()

@@ -14,32 +14,32 @@
             android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/green"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                 <EditText
-                   android:id="@+id/search_bar"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_centerInParent="true"
-                   android:background="@color/green"
-                   android:hint="カテゴリーで探す"/>
+                        android:id="@+id/search_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/green"
+                        android:hint="カテゴリーで探す"/>
 
                 <Button
-                   android:id="@+id/search_button"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentEnd="true"
-                   android:layout_centerVertical="true"
-                   android:text="探す"/>
+                        android:id="@+id/search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="探す"/>
 
-             </RelativeLayout>
+            </RelativeLayout>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
