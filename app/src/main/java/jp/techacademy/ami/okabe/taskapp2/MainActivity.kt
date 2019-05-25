@@ -56,8 +56,7 @@ class MainActivity : AppCompatActivity() {
                 listView1.adapter = mTaskAdapter
                 mTaskAdapter.notifyDataSetChanged()
             } else {
-                Snackbar.make(view, "カテゴリーを入力してください", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                reloadListView()
             }
         }
 

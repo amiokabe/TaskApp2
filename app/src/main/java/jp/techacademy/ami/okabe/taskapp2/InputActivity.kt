@@ -23,6 +23,7 @@ class InputActivity : AppCompatActivity() {
     private var mHour = 0
     private var mMinute = 0
     private var mTask:Task? = null
+    private lateinit var mRealm: Realm
 
     private val mOnDateClickListener = View.OnClickListener {
         val datePickerDialog = DatePickerDialog (this,
@@ -48,8 +49,14 @@ class InputActivity : AppCompatActivity() {
     }
 
     private val mOnDoneClickListener = View.OnClickListener {
-        addTask()
-        finish()
+        if (title_edit_text.text.toString() != "") {
+            addTask()
+            finish()
+        } else {
+            val view = findViewById<View>(android.R.id.content)
+            Snackbar.make(view, "タイトルは必須入力です", Snackbar.LENGTH_LONG)
+                .show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -118,6 +125,7 @@ class InputActivity : AppCompatActivity() {
         }
 
         val category = category_edit_text.text.toString()
+
         val title = title_edit_text.text.toString()
         val content = content_edit_text.text.toString()
 
